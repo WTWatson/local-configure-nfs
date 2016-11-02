@@ -1,3 +1,7 @@
+/*
+	Simple test script to see if my NFS share server is accessible.
+*/
+
 const exec = require('child_process').exec;
 const serverIp = '10.0.0.30';
 
