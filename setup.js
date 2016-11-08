@@ -12,8 +12,16 @@ const serverIp = '10.0.0.30';
 
 const nfs = [
 	{
-		folder:'neso', 
-		remote:'/mnt/backup/neso/'
+		folder:'neso-teamfocus', 
+		remote:'/mnt/backup/neso/teamfocus'
+	},
+	{
+		folder:'neso-appnest', 
+		remote:'/mnt/backup/neso/appnest'
+	},
+	{
+		folder:'neso-office', 
+		remote:'/mnt/backup/neso/office'
 	},
 	{
 		folder:'raven-clients', 
@@ -42,7 +50,7 @@ fs.readdir('/mnt', function(err, files) {
 */
 
 nfs.forEach(function(share) {
-	exec('sudo mount -t nfs ' + serverIp + ':' + share.remote + ' ' + '/mnt/' +share.folder, function(error, stdout, stderr) { 
+	exec('sudo mount -t nfs ' + serverIp + ':' + share.remote + ' ' + '/mnt/' + share.folder, function(error, stdout, stderr) { 
 		if(stderr)
 			console.log(stderr);
 
