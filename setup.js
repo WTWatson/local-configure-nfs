@@ -24,6 +24,10 @@ const nfs = [
 		remote:'/mnt/backup/neso/office'
 	},
 	{
+		folder:'neso-optimalmonitoring', 
+		remote:'/mnt/backup/neso/optimalmonitoring'
+	},
+	{
 		folder:'raven-clients', 
 		remote:'/mnt/backup/Ravenspec_clients'
 	},
